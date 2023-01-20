@@ -3,6 +3,7 @@ import logger from "redux-logger";
 import authReducer from "../features/auth/authSlice";
 import allPropertiesReducer from "../features/property/propertiesSlice";
 import propertyReducer from "../features/property/propertySlice";
+import allTasksReducer from "../features/Task/tasksSlice";
 import unitReducer from "../features/unit/unitSlice";
 import allUnitsReducer from "../features/unit/unitsSlice";
 
@@ -13,6 +14,7 @@ const store = configureStore({
     property: propertyReducer,
     units: allUnitsReducer,
     unit: unitReducer,
+    tasks: allTasksReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

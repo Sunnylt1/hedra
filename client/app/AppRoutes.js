@@ -6,6 +6,7 @@ import Home from "../features/home/Home";
 import LandingPage from "../features/home/LandingPage";
 import Properties from "../features/property/Properties";
 import Property from "../features/property/Property";
+import Tasks from "../features/Task/Tasks";
 import Units from "../features/unit/Units";
 import { me } from "./store";
 
@@ -30,6 +31,7 @@ const AppRoutes = () => {
           <Route path="/properties" element={<Properties />} />
           <Route path="/properties/:propertyId" element={<Property />} />
           <Route path="/units" element={<Units />} />
+          <Route path="/tasks" element={<Tasks />} />
         </Routes>
       ) : (
         <Routes>
