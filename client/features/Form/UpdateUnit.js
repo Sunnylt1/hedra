@@ -2,20 +2,16 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateUnit } from "../unit/unitSlice";
 
-const UpdateUnitForm = () => {
-  // console.log(unit);
+const UpdateUnitForm = ({ unit }) => {
   const dispatch = useDispatch();
-  // const unitId = unit.id;
 
   const [leaseStart, setLeaseStart] = useState("");
   const [leaseEnd, setLeaseEnd] = useState("");
   const [occupancy, setOccupancy] = useState("");
 
   const handleSubmit = async (evt) => {
-    console.log("UNIT ID", unitId);
     evt.preventDefault();
-    console.log(evt);
-    dispatch(updateUnit({ unitId, leaseStart, leaseEnd, occupancy }));
+    dispatch(updateUnit({ unitId: unit.id, leaseStart, leaseEnd, occupancy }));
     setLeaseStart("");
     setLeaseEnd("");
     setOccupancy("");

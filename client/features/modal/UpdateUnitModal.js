@@ -1,7 +1,7 @@
 import React from "react";
 import UpdateUnitForm from "../Form/UpdateUnit";
 
-const UpdateUnitModal = ({ closeModal }) => {
+const UpdateUnitModal = ({ closeModal, unit }) => {
   return (
     <div className="modalBackground2">
       <div className="modalContainer2">
@@ -14,7 +14,7 @@ const UpdateUnitModal = ({ closeModal }) => {
           <h2>Update Unit Lease Terms:</h2>
         </div>
         <div className="modalBody">
-          <UpdateUnitForm />
+          <UpdateUnitForm unit={unit} />
         </div>
       </div>
     </div>
