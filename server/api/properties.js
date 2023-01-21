@@ -31,4 +31,20 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+router.put("/:propertyId", async (req, res, next) => {
+  try {
+    const property = await Property.findByPk(req.params.propertyId, {
+      include: [{ model: Unit }],
+    });
+    if (property !== null) {
+      let updateProperty = await property.update(req.body);
+      res.json(updateProperty);
+    } else {
+      res.sendStatus(404);
+    }
+  } catch (err) {
+    next(err);
+  }
+});
+
 module.exports = router;
