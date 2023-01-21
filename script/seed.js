@@ -48,12 +48,16 @@ const units = [
     unitType: "2 Bedroom, 1 bath, duplex",
     leaseStart: "2022-06-01",
     leaseEnd: "2023-06-01",
+    floorPlan:
+      "http://www.arcadiarun.com/wp-content/uploads/2016/09/Screen-Shot-2016-09-26-at-5.08.54-PM.png",
   },
   {
     name: "B",
     unitType: "2 Bedroom, 1 bath, duplex",
     leaseStart: "2022-12-01",
     leaseEnd: "2023-12-01",
+    floorPlan:
+      "http://www.arcadiarun.com/wp-content/uploads/2016/09/Screen-Shot-2016-09-26-at-5.08.54-PM.png",
   },
   {
     name: "C",
@@ -61,24 +65,32 @@ const units = [
     occupancy: "VACANT",
     leaseStart: "2021-12-01",
     leaseEnd: "2022-12-01",
+    floorPlan:
+      "http://www.arcadiarun.com/wp-content/uploads/2016/09/Screen-Shot-2016-09-26-at-5.08.54-PM.png",
   },
   {
     name: "D",
     unitType: "2 Bedroom, 1 bath",
     leaseStart: "2023-01-01",
     leaseEnd: "2024-01-01",
+    floorPlan:
+      "http://www.arcadiarun.com/wp-content/uploads/2016/09/Screen-Shot-2016-09-26-at-5.08.54-PM.png",
   },
   {
     name: "E",
     unitType: "2 Bedroom, 1 bath",
     leaseStart: "2022-10-01",
     leaseEnd: "2023-10-01",
+    floorPlan:
+      "http://www.arcadiarun.com/wp-content/uploads/2016/09/Screen-Shot-2016-09-26-at-5.08.54-PM.png",
   },
   {
     name: "F",
     unitType: "2 Bedroom, 1 bath",
     leaseStart: "2022-09-01",
     leaseEnd: "2023-09-01",
+    floorPlan:
+      "http://www.arcadiarun.com/wp-content/uploads/2016/09/Screen-Shot-2016-09-26-at-5.08.54-PM.png",
   },
   {
     name: "G",
@@ -86,6 +98,8 @@ const units = [
     occupancy: "VACANT",
     leaseStart: "2021-11-01",
     leaseEnd: "2022-11-01",
+    floorPlan:
+      "http://www.arcadiarun.com/wp-content/uploads/2016/09/Screen-Shot-2016-09-26-at-5.08.54-PM.png",
   },
   {
     name: "H",
@@ -93,6 +107,8 @@ const units = [
     occupancy: "VACANT",
     leaseStart: "2021-10-01",
     leaseEnd: "2022-10-01",
+    floorPlan:
+      "http://www.arcadiarun.com/wp-content/uploads/2016/09/Screen-Shot-2016-09-26-at-5.08.54-PM.png",
   },
 ];
 

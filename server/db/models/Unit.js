@@ -35,6 +35,11 @@ const Unit = db.define("unit", {
     defaultValue: "OCCUPIED",
     allowNull: false,
   },
+  floorPlan: {
+    type: Sequelize.TEXT,
+    defaultValue:
+      "https://images.edrawmax.com/examples/apartment-floor-plan/example2.png",
+  },
 });
 
 module.exports = Unit;

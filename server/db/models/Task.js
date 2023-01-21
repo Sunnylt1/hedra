@@ -17,8 +17,9 @@ const Task = db.define("task", {
     },
   },
   isComplete: {
-    type: Sequelize.BOOLEAN,
-    defaultValue: false,
+    type: Sequelize.ENUM("COMPLETE", "IN PROGRESS", "OPEN"),
+    defaultValue: "COMPLETE",
+    allowNull: false,
   },
 });
 
