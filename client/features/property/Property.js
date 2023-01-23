@@ -2,6 +2,7 @@ import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import EditPropertyModal from "../modal/EditPropertyModal";
 import UpdateUnitModal from "../modal/UpdateUnitModal";
 import { fetchProperty, selectProperty } from "./propertySlice";
 
@@ -17,10 +18,19 @@ const Property = () => {
   }, [dispatch]);
 
   const [openModal, setOpenModal] = useState(false);
+  const [openModalOther, setOpenModalOther] = useState(false);
 
   return (
     <div className="single-property">
       <h1>{name}</h1>
+      <div>
+        <button className="button-34" onClick={() => setOpenModalOther(true)}>
+          Edit Property
+        </button>
+        {openModalOther && (
+          <EditPropertyModal closeModalOther={setOpenModalOther} />
+        )}
+      </div>
       <Grid
         container
         justifyContent="left"
@@ -31,7 +41,7 @@ const Property = () => {
           mt: 30,
         }}
       >
-        <Card raised sx={{ width: 400, height: 700, ml: 10, mt: 8 }}>
+        <Card raised sx={{ width: 400, height: 600, ml: 10, mt: 8 }}>
           <div key={propertyId}>
             <Grid align="center">
               <CardMedia
@@ -61,11 +71,6 @@ const Property = () => {
               </Typography>
             </CardContent>
           </div>
-          <Grid align="center">
-            <button className="button-34" type="submit" display="flex">
-              Edit Property
-            </button>
-          </Grid>
         </Card>
         <div>
           <div className="unitList">

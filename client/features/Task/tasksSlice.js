@@ -10,6 +10,22 @@ export const fetchAllTasks = createAsyncThunk("tasks/fetchAll", async () => {
   }
 });
 
+export const addTask = createAsyncThunk(
+  "tasks/addTask",
+  async ({ name, description, isComplete }) => {
+    try {
+      const { data } = await axios.post("/api/tasks", {
+        name,
+        description,
+        isComplete,
+      });
+      return data;
+    } catch (error) {
+      return error.message;
+    }
+  }
+);
+
 const allTasksSlice = createSlice({
   name: "tasks",
   initialState: [],
@@ -17,6 +33,9 @@ const allTasksSlice = createSlice({
   extraReducers(builder) {
     builder.addCase(fetchAllTasks.fulfilled, (state, action) => {
       return action.payload;
+    });
+    builder.addCase(addTask.fulfilled, (state, action) => {
+      state.push(action.payload);
     });
   },
 });

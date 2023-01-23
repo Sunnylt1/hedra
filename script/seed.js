@@ -152,6 +152,7 @@ async function seed() {
       Task.create({
         name: task.name,
         description: task.description,
+        isComplete: task.isComplete,
       }),
     ]);
   }

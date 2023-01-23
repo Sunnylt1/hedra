@@ -10,4 +10,14 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.post("/", async (req, res, next) => {
+  try {
+    const newTask = await Task.create(req.body);
+    await newTask.save();
+    res.json(newTask);
+  } catch (err) {
+    next(err);
+  }
+});
+
 module.exports = router;
